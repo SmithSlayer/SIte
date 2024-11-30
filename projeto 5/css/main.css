@@ -1,0 +1,325 @@
+
+body {
+    background-image: url(/img/Design_sem_nome_9.png);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-color: black; 
+    overflow-x: hidden; 
+}
+
+.logo {
+  width: 135px;
+	height: auto;
+	position: static;
+	left: 50px;
+	top: 50px;
+}
+
+
+/* Navbar */
+#navbar {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(248, 248, 69); 
+    position: fixed;
+    top: 0;
+    width: 110%;
+    list-style-type: none;
+}
+
+
+#navbar .navbar-container .navbar-items {
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}    
+
+#navbar .navbar-container ul li {
+    padding: 3px 10px;
+    transition: all 300ms ease;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+  
+  .header {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgb(248, 248, 69); 
+    padding-inline: 18px;
+  }
+  
+  .nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+  
+  
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    padding-left: -100px;
+  }
+  
+  .nav-list a {
+    font-size: 15px;
+    color: rgb(245, 234, 82);
+    padding-block: 30px;
+    position:relative;
+  }
+  
+  .hero {
+    height: calc(100vh - 70px);
+    background: center / cover no-repeat url("./bg.jpg");
+  }
+  
+  .hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+  }
+  
+  .hamburger::after,
+  .hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 750px) {
+    .hamburger {
+      display: block;
+      z-index: 1;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #a5c;
+      clip-path: circle(100px at 90% -15%);
+      transition: 1s ease-out;
+  
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 0;
+  
+      pointer-events: none;
+    }
+  
+    .nav-list a {
+      font-size: 24px;
+      opacity: 0;
+    }
+  
+    .nav-list li:nth-child(1) a {
+      transition: 0.5s 0.2s;
+    }
+  
+    .nav-list li:nth-child(2) a {
+      transition: 0.5s 0.4s;
+    }
+  
+    .nav-list li:nth-child(3) a {
+      transition: 0.5s 0.6s;
+    }
+  
+    /* Estilos ativos */
+  
+    .nav.active .nav-list {
+      clip-path: circle(1500px at 90% -15%);
+      pointer-events: all;
+    }
+  
+    .nav.active .nav-list a {
+      opacity: 1;
+    }
+  
+    .nav.active .hamburger {
+      position: fixed;
+      top: 26px;
+      right: 16px;
+      border-top-color: transparent;
+    }
+  
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+  
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+.seta{
+    width: 52px;
+    height: 60px;
+    position: relative;
+    padding: 70px;
+    left: 49.4%;
+    transform: translateX(-50%);
+    color: black;
+    animation-name: seta;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes seta {
+    0%{
+        top: 0px;
+    }
+    100%{
+        top: 20px;
+    }
+}
+
+nav a::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: gold;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+nav li:hover ::after{
+  width: 100%;
+}
+
+.nav-list li a:hover{
+  color: white;
+}
+
+.mbr-selction-btn {
+  padding: 20%;
+  position: relative;
+  top: 240px;
+  left: 23%;
+  margin: 6px;
+}
+
+.bnt1 {
+  font-family: rubik, sans-serif;
+  font-size: 20px;
+  font-weight: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: gold;
+  padding: 8px 40px;
+  border: gold 3px solid;
+  border-radius: 10px;
+  box-shadow: inset 0 0 32px 0 gold, 0 0 32px 0 gold;
+  text-shadow: 0 0 8px hsl(0 0% 100% / 0.3) 0 0 32px;
+  position: relative;
+}
+
+.bnt1:hover {
+  color: white;
+}
+
+#footer {
+  background: rgb(247, 243, 59);
+  padding:80px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: gold;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 30px;
+} 
+
+.trailer iframe {
+  padding-left: 10%;
+}
+.trailer {
+  width: 48%;
+}
+
+.trailerbio p {
+  padding-left: 5%;
+  color:black;
+  font-size: 1.0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px; line-height: 1.2em;
+  
+}
+
+.trailerbio h1 {
+  padding-left: 5%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#fff;
+  
+}
+
+#footer3 h1 {
+  padding-top: -20px;
+  font-size: 1.5em; /* Tamanho da fonte 2 vezes o tamanho padrão */
+  text-align: center; /* Alinhamento no centro */
+  margin:auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#fff;
+}
+
+#footer2 {
+  background: rgb(247, 243, 59);
+  padding:10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#carouselExampleDark {
+  max-width: 800px; /* Largura máxima do carousel */
+  margin: auto; /* Centralizar o carousel na página */
+} 
+
+.carousel-item img {
+  max-width: 100%; /* Imagens ocupam a largura máxima do container pai */
+  height: auto; /* Altura é ajustada automaticamente para manter a proporção da imagem */
+}
+
+
+#footer3 {
+  background: black;
+  padding:100px 0px;
+}
